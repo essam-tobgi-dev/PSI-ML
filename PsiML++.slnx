@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PsiML++/PsiML++.vcxproj" Id="cfd4d0da-6635-4bbc-b2d4-0f83299cc620" />
+</Solution>
