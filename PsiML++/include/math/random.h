@@ -1,7 +1,5 @@
 #pragma once
 
-#define _USE_MATH_DEFINES
-
 #include "../core/types.h"
 #include "../core/config.h"
 #include "../core/memory.h"
@@ -14,6 +12,10 @@
 #include <chrono>
 #include <algorithm>
 #include <cmath>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 namespace psi {
     namespace math {

@@ -40,9 +40,6 @@ namespace psi {
                 Bessel = 1       // N-1 denominator (sample)
             };
 
-            // Axis specification for multi-dimensional statistics
-            constexpr core::index_t ALL_AXES = -1;
-
             // Basic statistics for containers
 
             // Mean
@@ -52,7 +49,7 @@ namespace psi {
                 static_assert(std::is_arithmetic_v<value_type>, "Mean requires arithmetic type");
 
                 PSI_ASSERT(a.size() > 0, "Cannot compute mean of empty container");
-                return sum(a) / static_cast<value_type>(a.size());
+                return reduce_sum(a) / static_cast<value_type>(a.size());
             }
 
             // Mean along specific axis (for matrices and tensors)

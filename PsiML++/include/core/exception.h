@@ -261,6 +261,8 @@ namespace psi {
 
 #define PSI_THROW_NOT_IMPLEMENTED(feature) \
     throw ::psi::core::NotImplementedException(feature)
+#define PSI_THROW_ML(message) \
+    throw ::psi::core::PsiException("ML Error: " + std::string(message))
 
 // Dimension mismatch helper
 #define PSI_CHECK_DIMENSIONS(op, expected, actual) \
