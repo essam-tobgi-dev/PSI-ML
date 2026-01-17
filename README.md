@@ -1,6 +1,6 @@
 # PsiML++
 
-<img width="954" height="838" alt="image" src="https://github.com/user-attachments/assets/8178d9ce-8bcc-4c9d-96cb-fe4b9cd96275" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4151d17c-d367-48ce-9fdb-d64eff2261c9" />
 
 **PsiML++** is a modern C++ machine learning library designed for high-performance computations, providing core utilities, linear algebra operations, machine learning algorithms, preprocessing tools, and vision functionalities. The library is structured for modular development, testing, and easy integration into C++ projects.
 
