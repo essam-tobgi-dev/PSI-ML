@@ -184,6 +184,4 @@ compile_and_run.bat
 
 ## License
 
-```
-MIT License
-```
+[MIT License](LICENSE)
