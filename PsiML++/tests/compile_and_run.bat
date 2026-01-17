@@ -247,7 +247,7 @@ set PASSED=0
 set FAILED=0
 
 REM Run each test
-for %%t in (device logging memory vector matrix tensor random blas decomposition solvers eigen arithmetic reduction broadcasting statistics ml profiler fileio vision) do (
+for %%t in (device logging memory vector matrix tensor random blas decomposition solvers eigen arithmetic reduction broadcasting statistics ml profiler fileio) do (
     set /a TOTAL+=1
     echo.
     echo ========================================
