@@ -5,10 +5,12 @@ echo ========================================
 echo.
 
 :: ANSI colors
+
 set "GREEN=[32m"
 set "YELLOW=[33m"
 set "RED=[31m"
 set "RESET=[0m"
+
 
 REM Set compiler (change this if using a different compiler)
 set CXX=g++
@@ -40,7 +42,7 @@ echo Compiling Core Tests
 echo ========================================
 echo.
 
-echo %YELLOW%[1/16] Compiling test_device...%RESET%
+echo %YELLOW%[1/19] Compiling test_device...%RESET%
 %CXX% %CXXFLAGS% test_device.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %CORE_DIR%\memory.cpp -o bin\test_device.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_device
@@ -49,7 +51,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_device compiled%RESET%
 
-echo %YELLOW%[2/16] Compiling test_logging...%RESET%
+echo %YELLOW%[2/19] Compiling test_logging...%RESET%
 %CXX% %CXXFLAGS% test_logging.cpp %CORE_DIR%\logging.cpp %CORE_DIR%\device.cpp %CORE_DIR%\memory.cpp -o bin\test_logging.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_logging
@@ -58,7 +60,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_logging compiled%RESET%
 
-echo %YELLOW%[3/16] Compiling test_memory...%RESET%
+echo %YELLOW%[3/19] Compiling test_memory...%RESET%
 %CXX% %CXXFLAGS% test_memory.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_memory.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_memory
@@ -73,7 +75,7 @@ echo Compiling Math Tests
 echo ========================================
 echo.
 
-echo %YELLOW%[4/16] Compiling test_vector...%RESET%
+echo %YELLOW%[4/19] Compiling test_vector...%RESET%
 %CXX% %CXXFLAGS% test_vector.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_vector.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_vector
@@ -82,7 +84,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_vector compiled%RESET%
 
-echo %YELLOW%[5/16] Compiling test_matrix...%RESET%
+echo %YELLOW%[5/19] Compiling test_matrix...%RESET%
 %CXX% %CXXFLAGS% test_matrix.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_matrix.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_matrix
@@ -91,7 +93,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_matrix compiled%RESET%
 
-echo %YELLOW%[6/16] Compiling test_tensor...%RESET%
+echo %YELLOW%[6/19] Compiling test_tensor...%RESET%
 %CXX% %CXXFLAGS% test_tensor.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_tensor.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_tensor
@@ -100,7 +102,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_tensor compiled%RESET%
 
-echo %YELLOW%[7/16] Compiling test_random...%RESET%
+echo %YELLOW%[7/19] Compiling test_random...%RESET%
 %CXX% %CXXFLAGS% test_random.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_random.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_random
@@ -115,7 +117,7 @@ echo Compiling Linear Algebra Tests
 echo ========================================
 echo.
 
-echo %YELLOW%[8/16] Compiling test_blas...%RESET%
+echo %YELLOW%[8/19] Compiling test_blas...%RESET%
 %CXX% %CXXFLAGS% test_blas.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %LINALG_DIR%\blas.cpp -o bin\test_blas.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_blas
@@ -124,7 +126,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_blas compiled%RESET%
 
-echo %YELLOW%[9/16] Compiling test_decomposition...
+echo %YELLOW%[9/19] Compiling test_decomposition...%RESET%
 %CXX% %CXXFLAGS% test_decomposition.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %LINALG_DIR%\blas.cpp -o bin\test_decomposition.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_decomposition
@@ -133,7 +135,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_decomposition compiled%RESET%
 
-echo %YELLOW%[10/16] Compiling test_solvers...%RESET%
+echo %YELLOW%[10/19] Compiling test_solvers...%RESET%
 %CXX% %CXXFLAGS% test_solvers.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %LINALG_DIR%\blas.cpp -o bin\test_solvers.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_solvers
@@ -142,7 +144,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_solvers compiled%RESET%
 
-echo %YELLOW%[11/16] Compiling test_eigen...%RESET%
+echo %YELLOW%[11/19] Compiling test_eigen...%RESET%
 %CXX% %CXXFLAGS% test_eigen.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %LINALG_DIR%\blas.cpp -o bin\test_eigen.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_eigen
@@ -157,7 +159,7 @@ echo Compiling Operations Tests
 echo ========================================
 echo.
 
-echo %YELLOW%[12/16] Compiling test_arithmetic...%RESET%
+echo %YELLOW%[12/19] Compiling test_arithmetic...%RESET%
 %CXX% %CXXFLAGS% test_arithmetic.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_arithmetic.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_arithmetic
@@ -166,7 +168,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_arithmetic compiled%RESET%
 
-echo %YELLOW%[13/16] Compiling test_reduction...%RESET%
+echo %YELLOW%[13/19] Compiling test_reduction...%RESET%
 %CXX% %CXXFLAGS% test_reduction.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_reduction.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_reduction
@@ -175,7 +177,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_reduction compiled%RESET%
 
-echo %YELLOW%[14/16] Compiling test_broadcasting...%RESET%
+echo %YELLOW%[14/19] Compiling test_broadcasting...%RESET%
 %CXX% %CXXFLAGS% test_broadcasting.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_broadcasting.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_broadcasting
@@ -184,7 +186,7 @@ if %errorlevel% neq 0 (
 )
 echo  %GREEN%test_broadcasting compiled%RESET%
 
-echo %YELLOW%[15/16] Compiling test_statistics...%RESET%
+echo %YELLOW%[15/19] Compiling test_statistics...%RESET%
 %CXX% %CXXFLAGS% test_statistics.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_statistics.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_statistics
@@ -199,7 +201,7 @@ echo Compiling ML Tests
 echo ========================================
 echo.
 
-echo %YELLOW%[16/16] Compiling test_ml...%RESET%
+echo %YELLOW%[16/19] Compiling test_ml...%RESET%
 %CXX% %CXXFLAGS% test_ml.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp %LINALG_DIR%\blas.cpp -o bin\test_ml.exe
 if %errorlevel% neq 0 (
     echo Failed to compile test_ml
@@ -207,6 +209,30 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 echo  %GREEN%test_ml compiled%RESET%
+
+echo.
+echo ========================================
+echo Compiling Utils Tests
+echo ========================================
+echo.
+
+echo %YELLOW%[17/19] Compiling test_profiler...%RESET%
+%CXX% %CXXFLAGS% test_profiler.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_profiler.exe
+if %errorlevel% neq 0 (
+    echo Failed to compile test_profiler
+    pause
+    exit /b 1
+)
+echo  %GREEN%test_profiler compiled%RESET%
+
+echo %YELLOW%[18/19] Compiling test_fileio...%RESET%
+%CXX% %CXXFLAGS% test_fileio.cpp %CORE_DIR%\memory.cpp %CORE_DIR%\device.cpp %CORE_DIR%\logging.cpp -o bin\test_fileio.exe
+if %errorlevel% neq 0 (
+    echo Failed to compile test_fileio
+    pause
+    exit /b 1
+)
+echo  %GREEN%test_fileio compiled%RESET%
 
 echo.
 echo ========================================
@@ -221,7 +247,7 @@ set PASSED=0
 set FAILED=0
 
 REM Run each test
-for %%t in (device logging memory vector matrix tensor random blas decomposition solvers eigen arithmetic reduction broadcasting statistics ml) do (
+for %%t in (device logging memory vector matrix tensor random blas decomposition solvers eigen arithmetic reduction broadcasting statistics ml profiler fileio vision) do (
     set /a TOTAL+=1
     echo.
     echo ========================================
@@ -251,7 +277,7 @@ if %FAILED% gtr 0 (
     pause
     exit /b 1
 ) else (
-    echo %GREEN%mALL TESTS PASSED!%RESET%
+    echo %GREEN%ALL TESTS PASSED!%RESET%
     pause
     exit /b 0
 )

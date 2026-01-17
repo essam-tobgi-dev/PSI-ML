@@ -173,17 +173,26 @@
     <ClInclude Include="include\ml\preprocessing\normalizer.h" />
     <ClInclude Include="include\ml\preprocessing\scalar.h" />
     <ClInclude Include="include\psi.h" />
+    <ClInclude Include="include\utils\data_loader.h" />
     <ClInclude Include="include\utils\file_io.h" />
-    <ClInclude Include="include\utils\math_utils.h" />
+    <ClInclude Include="include\utils\model_io.h" />
     <ClInclude Include="include\utils\profiler.h" />
     <ClInclude Include="include\utils\serialization.h" />
+    <ClInclude Include="include\utils\string_utils.h" />
     <ClInclude Include="include\utils\timer.h" />
+    <ClInclude Include="include\vision\drawing.h" />
+    <ClInclude Include="include\vision\image.h" />
+    <ClInclude Include="include\vision\image_io.h" />
+    <ClInclude Include="include\vision\image_processing.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\device.cpp" />
     <ClCompile Include="src\core\logging.cpp" />
     <ClCompile Include="src\core\memory.cpp" />
     <ClCompile Include="src\math\linalg\blas.cpp" />
+    <ClCompile Include="src\vision\drawing.cpp" />
+    <ClCompile Include="src\vision\image_io.cpp" />
+    <ClCompile Include="src\vision\image_processing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
